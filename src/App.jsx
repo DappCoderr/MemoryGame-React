@@ -1,12 +1,18 @@
 import React from "react";
-import Cards from "./component/Cards";
+import Start from "./component/Start";
+import { Routes, Route } from "react-router-dom";
+import Game from "./component/Game";
+import Victory from "./component/Victory";
+import Error from "./component/Error";
 
 const App = () => {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">Memory Game</h1>
-      <Cards />
-    </div>
+    <Routes>
+      <Route path="/" element={<Start />} />
+      <Route path="/game" element={<Game />} />
+      <Route path="/victory" element={<Victory />} />
+      <Route path="/*" element={<Error />} />
+    </Routes>
   );
 };
 
