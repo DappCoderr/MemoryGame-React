@@ -11,14 +11,34 @@ const initialCards = [
   { id: 6, value: "🐱", matched: false, flipped: false, disabled: false },
   { id: 7, value: "🐰", matched: false, flipped: false, disabled: false },
   { id: 8, value: "🐷", matched: false, flipped: false, disabled: false },
-  { id: 9, value: "🐁", matched: false, flipped: false, disabled: false },
-  { id: 10, value: "🐒", matched: false, flipped: false, disabled: false },
-  { id: 11, value: "🐝", matched: false, flipped: false, disabled: false },
-  { id: 12, value: "🦁", matched: false, flipped: false, disabled: false },
-  { id: 13, value: "🐴", matched: false, flipped: false, disabled: false },
-  { id: 14, value: "🐷", matched: false, flipped: false, disabled: false },
-  { id: 15, value: "🐱", matched: false, flipped: false, disabled: false },
-  { id: 16, value: "🐰", matched: false, flipped: false, disabled: false },
+  { id: 9, value: "😂", matched: false, flipped: false, disabled: false },
+  { id: 10, value: "💪", matched: false, flipped: false, disabled: false },
+  { id: 11, value: "🥹", matched: false, flipped: false, disabled: false },
+  { id: 12, value: "🧑‍💻", matched: false, flipped: false, disabled: false },
+  { id: 13, value: "🔥", matched: false, flipped: false, disabled: false },
+  { id: 14, value: "❤️", matched: false, flipped: false, disabled: false },
+  { id: 15, value: "🌊", matched: false, flipped: false, disabled: false },
+  { id: 16, value: "🥳", matched: false, flipped: false, disabled: false },
+  { id: 17, value: "🌎", matched: false, flipped: false, disabled: false },
+  { id: 18, value: "👹", matched: false, flipped: false, disabled: false },
+  { id: 19, value: "🐝", matched: false, flipped: false, disabled: false },
+  { id: 20, value: "🐁", matched: false, flipped: false, disabled: false },
+  { id: 21, value: "🐱", matched: false, flipped: false, disabled: false },
+  { id: 22, value: "🐰", matched: false, flipped: false, disabled: false },
+  { id: 23, value: "🐷", matched: false, flipped: false, disabled: false },
+  { id: 24, value: "🦁", matched: false, flipped: false, disabled: false },
+  { id: 25, value: "🐒", matched: false, flipped: false, disabled: false },
+  { id: 26, value: "🐴", matched: false, flipped: false, disabled: false },
+  { id: 27, value: "👹", matched: false, flipped: false, disabled: false },
+  { id: 28, value: "😂", matched: false, flipped: false, disabled: false },
+  { id: 29, value: "🌎", matched: false, flipped: false, disabled: false },
+  { id: 30, value: "❤️", matched: false, flipped: false, disabled: false },
+  { id: 31, value: "🌊", matched: false, flipped: false, disabled: false },
+  { id: 32, value: "🔥", matched: false, flipped: false, disabled: false },
+  { id: 33, value: "🥳", matched: false, flipped: false, disabled: false },
+  { id: 34, value: "👨🏻‍💻", matched: false, flipped: false, disabled: false },
+  { id: 35, value: "💪", matched: false, flipped: false, disabled: false },
+  { id: 36, value: "🥹", matched: false, flipped: false, disabled: false },
 ];
 
 const shuffleCards = (array) => {
@@ -103,13 +123,13 @@ const Game = () => {
             <span className="text-cyan-400 font-mono">{count}</span> Moves
           </div>
           <div className="bg-gray-700 px-6 py-2 rounded-full shadow-lg">
-            <span className="text-emerald-400 font-mono">{matched}</span> / 8
-            Matches
+            <span className="text-emerald-400 font-mono">{matched}</span> /{" "}
+            {initialCards.length / 2} Matches
           </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-4 md:grid-cols-4 gap-3 md:gap-4 max-w-4xl p-4 bg-gray-800/30 rounded-2xl shadow-xl">
+      <div className="grid grid-cols-6 md:grid-cols-6 gap-3 md:gap-4 max-w-4xl p-4 bg-gray-800/30 rounded-2xl shadow-xl">
         {cards.map((e) => (
           <Cards
             key={e.id}
