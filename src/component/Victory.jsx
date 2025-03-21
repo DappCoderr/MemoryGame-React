@@ -23,14 +23,6 @@ const Victory = () => {
           >
             Play Again
           </button>
-          <button
-            onClick={() => navigate("/game")}
-            className="px-8 py-3 bg-black rounded-full text-yellow-400 font-bold 
-            hover:bg-gray-900 transition-all duration-300 shadow-xl hover:shadow-2xl
-            transform hover:scale-105 active:scale-95"
-          >
-            New Game
-          </button>
         </div>
       </div>
       <div className="mt-12 flex space-x-4">
